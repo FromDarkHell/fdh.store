@@ -59,7 +59,7 @@ const AddAddress = ({
 
       <Modal isOpen={state} close={close} data-testid="add-address-modal">
         <Modal.Title>
-          <Heading className="mb-2">Add address</Heading>
+          <Heading>Add Address</Heading>
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
@@ -99,7 +99,7 @@ const AddAddress = ({
                 autoComplete="address-line2"
                 data-testid="address-2-input"
               />
-              <div className="grid grid-cols-[144px_1fr] gap-x-2">
+              <div className="grid grid-cols-2 gap-x-2">
                 <Input
                   label="Postal code"
                   name="postal_code"

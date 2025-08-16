@@ -111,7 +111,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             Edit
           </button>
           <button
-            className="text-small-regular text-ui-fg-base flex items-center gap-x-2"
+            className="text-small-regular text-red-500 flex items-center gap-x-2"
             onClick={removeAddress}
             data-testid="address-delete-button"
           >

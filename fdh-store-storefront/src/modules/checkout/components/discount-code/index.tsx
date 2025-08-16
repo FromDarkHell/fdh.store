@@ -1,6 +1,6 @@
 "use client"
 
-import { Badge, Heading, Input, Label, Text, Tooltip } from "@medusajs/ui"
+import { Badge, Heading, Label, Text, Tooltip } from "@medusajs/ui"
 import React, { useActionState } from "react";
 
 import { applyPromotions, submitPromotionForm } from "@lib/data/cart"
@@ -10,6 +10,7 @@ import { HttpTypes } from "@medusajs/types"
 import Trash from "@modules/common/icons/trash"
 import ErrorMessage from "../error-message"
 import { SubmitButton } from "../submit-button"
+import Input from "../../../common/components/input"
 
 type DiscountCodeProps = {
   cart: HttpTypes.StoreCart & {
@@ -52,17 +53,17 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   const [message, formAction] = useActionState(submitPromotionForm, null)
 
   return (
-    <div className="w-full bg-white flex flex-col">
+    <div className="w-full flex flex-col">
       <div className="txt-medium">
         <form action={(a) => addPromotionCode(a)} className="w-full mb-5">
           <Label className="flex gap-x-1 my-2 items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="txt-medium text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+              className="w-full bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 font-mono uppercase tracking-wider transition-all duration-300"
               data-testid="add-discount-button"
             >
-              Add Promotion Code(s)
+              Add Codes
             </button>
 
             {/* <Tooltip content="You can add multiple promotion codes">
@@ -74,13 +75,16 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
             <>
               <div className="flex w-full gap-x-2">
                 <Input
-                  className="size-full"
                   id="promotion-input"
                   name="code"
                   type="text"
+                  label="Discount Code"
+                  title="Input a valid discount code"
                   autoFocus={false}
                   data-testid="discount-input"
+                  required
                 />
+
                 <SubmitButton
                   variant="secondary"
                   data-testid="discount-apply-button"

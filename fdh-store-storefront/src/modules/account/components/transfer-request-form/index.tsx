@@ -2,10 +2,11 @@
 
 import { useActionState } from "react"
 import { createTransferRequest } from "@lib/data/orders"
-import { Text, Heading, Input, Button, IconButton, Toaster } from "@medusajs/ui"
+import { Text, Heading, Button, IconButton, Toaster } from "@medusajs/ui"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import { CheckCircleMiniSolid, XCircleSolid } from "@medusajs/icons"
 import { useEffect, useState } from "react"
+import Input from "@modules/common/components/input"
 
 export default function TransferRequestForm() {
   const [showSuccess, setShowSuccess] = useState(false)
@@ -26,10 +27,10 @@ export default function TransferRequestForm() {
     <div className="flex flex-col gap-y-4 w-full">
       <div className="grid sm:grid-cols-2 items-center gap-x-8 gap-y-4 w-full">
         <div className="flex flex-col gap-y-1">
-          <Heading level="h3" className="text-lg text-neutral-950">
-            Order transfers
+          <Heading level="h3" className="text-lg neon-green">
+            Order Transfers
           </Heading>
-          <Text className="text-base-regular text-neutral-500">
+          <Text className="text-base-regular">
             Can&apos;t find the order you are looking for?
             <br /> Connect an order to your account.
           </Text>
@@ -39,10 +40,13 @@ export default function TransferRequestForm() {
           className="flex flex-col gap-y-1 sm:items-end"
         >
           <div className="flex flex-col gap-y-2 w-full">
-            <Input className="w-full" name="order_id" placeholder="Order ID" />
+            <Input
+              label="Order ID"
+              name="order_id"
+            />
             <SubmitButton
               variant="secondary"
-              className="w-fit whitespace-nowrap self-end"
+              className="w-fit whitespace-nowrap self-end mt-6 bg-transparent border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 font-mono uppercase tracking-wider transition-all duration-300"
             >
               Request transfer
             </SubmitButton>

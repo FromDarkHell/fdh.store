@@ -1,7 +1,7 @@
 import { getPercentageDiff } from "@lib/util/get-precentage-diff"
 import { convertToLocale } from "@lib/util/money"
-import { HttpTypes } from "@medusajs/types"
 import { clx } from "@medusajs/ui"
+import { HttpTypes } from "@medusajs/types"
 
 type LineItemPriceProps = {
   item: HttpTypes.StoreCartLineItem | HttpTypes.StoreOrderLineItem
@@ -20,16 +20,16 @@ const LineItemPrice = ({
   const hasReducedPrice = currentPrice < originalPrice
 
   return (
-    <div className="flex flex-col gap-x-2 text-ui-fg-subtle items-end">
-      <div className="text-left">
+    <div className="flex flex-col gap-x-2 text-green-100 items-end font-mono">
+      <div className="text-right">
         {hasReducedPrice && (
           <>
-            <p>
+            <p className="text-xs">
               {style === "default" && (
-                <span className="text-ui-fg-subtle">Original: </span>
+                <span className="text-gray-400">Original: </span>
               )}
               <span
-                className="line-through text-ui-fg-muted"
+                className="line-through text-gray-500"
                 data-testid="product-original-price"
               >
                 {convertToLocale({
@@ -39,15 +39,16 @@ const LineItemPrice = ({
               </span>
             </p>
             {style === "default" && (
-              <span className="text-ui-fg-interactive">
+              <span className="text-lime-400 text-xs font-bold">
                 -{getPercentageDiff(originalPrice, currentPrice || 0)}%
               </span>
             )}
           </>
         )}
         <span
-          className={clx("text-base-regular", {
-            "text-ui-fg-interactive": hasReducedPrice,
+          className={clx("text-sm font-bold", {
+            "text-lime-400": hasReducedPrice,
+            "text-green-400": !hasReducedPrice,
           })}
           data-testid="product-price"
         >

@@ -18,7 +18,7 @@ const Login = ({ setCurrentView }: Props) => {
       data-testid="login-page"
     >
       <h1 className="text-large-semi uppercase mb-6">Welcome back</h1>
-      <p className="text-center text-base-regular text-ui-fg-base mb-8">
+      <p className="text-center text-base-regular mb-8">
         Sign in to access an enhanced shopping experience.
       </p>
       <form className="w-full" action={formAction}>
@@ -42,7 +42,7 @@ const Login = ({ setCurrentView }: Props) => {
           />
         </div>
         <ErrorMessage error={message} data-testid="login-error-message" />
-        <SubmitButton data-testid="sign-in-button" className="w-full mt-6">
+        <SubmitButton data-testid="sign-in-button" className="w-full mt-6 bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 font-mono uppercase tracking-wider transition-all duration-300">
           Sign in
         </SubmitButton>
       </form>

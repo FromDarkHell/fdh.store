@@ -107,7 +107,7 @@ const Payment = ({
   }, [isOpen])
 
   return (
-    <div className="bg-white">
+    <div>
       <div className="flex flex-row items-center justify-between mb-6">
         <Heading
           level="h2"
@@ -187,7 +187,7 @@ const Payment = ({
 
           <Button
             size="large"
-            className="mt-6"
+            className="w-full mt-6 bg-transparent border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 font-mono uppercase tracking-wider transition-all duration-300"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={

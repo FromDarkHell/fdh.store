@@ -38,11 +38,9 @@ const ItemsTemplate = ({ cart }: ItemsTemplateProps) => {
                 })
                 .map((item) => {
                   return (
-                    <Item
-                      key={item.id}
-                      item={item}
-                      currencyCode={cart?.currency_code}
-                    />
+                    <Table.Row className="w-full m-4" key={item.id}>
+                      <Item item={item} currencyCode={cart?.currency_code}/>
+                    </Table.Row>
                   )
                 })
             : repeat(5).map((i) => {

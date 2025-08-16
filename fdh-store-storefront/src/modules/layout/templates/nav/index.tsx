@@ -11,42 +11,72 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
-        <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
-          <div className="flex-1 basis-0 h-full flex items-center">
-            <div className="h-full">
-              <SideMenu regions={regions} />
-            </div>
-          </div>
-
-          <div className="flex items-center h-full">
+      <header className="relative h-16 mx-auto border-b duration-200 bg-gray-800/95 backdrop-blur-sm border-green-400/30">
+        {/* Terminal-style header decoration */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-400 to-transparent opacity-50"></div>
+        
+        <nav className="content-container txt-xsmall-plus text-green-300 flex items-center justify-between w-full h-full text-small-regular font-mono">
+          {/* Center - Logo */}
+          <div className="flex items-center h-full relative">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="text-xl font-bold hover:text-blue-400 uppercase tracking-wider transition-all duration-300 relative group"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              <span className="relative z-10">fdh Systems</span>
+              {/* Subtle glitch effect on hover */}
+              <span className="absolute inset-0 text-blue-400 opacity-0 group-hover:opacity-70 transition-opacity duration-150 transform group-hover:translate-x-0.5">
+                fdh Systems
+              </span>
+              <span className="absolute inset-0 text-red-400 opacity-0 group-hover:opacity-50 transition-opacity duration-150 transform group-hover:-translate-x-0.5">
+                fdh Systems
+              </span>
             </LocalizedClientLink>
+            
+            {/* Terminal cursor */}
+            <span className="ml-1 text-green-400 animate-pulse">_</span>
           </div>
 
+          {/* Right side - Account & Cart */}
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
+
             <div className="hidden small:flex items-center gap-x-6 h-full">
               <LocalizedClientLink
-                className="hover:text-ui-fg-base"
+                className="hover:text-blue-400 transition-colors duration-200 uppercase tracking-wide text-sm border border-transparent hover:border-blue-400/30 px-2 py-1"
+                href="/categories/prebuilts"
+                data-testid="nav-send-ins-link"
+              >
+                [Shop]
+              </LocalizedClientLink>
+            </div>
+
+            <div className="hidden small:flex items-center gap-x-6 h-full">
+              <LocalizedClientLink
+                className="hover:text-blue-400 transition-colors duration-200 uppercase tracking-wide text-sm border border-transparent hover:border-blue-400/30 px-2 py-1"
+                href="/categories/send-ins"
+                data-testid="nav-send-ins-link"
+              >
+                [Services]
+              </LocalizedClientLink>
+            </div>
+
+            <div className="hidden small:flex items-center gap-x-6 h-full">
+              <LocalizedClientLink
+                className="hover:text-blue-400 transition-colors duration-200 uppercase tracking-wide text-sm border border-transparent hover:border-blue-400/30 px-2 py-1"
                 href="/account"
                 data-testid="nav-account-link"
               >
-                Account
+                [Account]
               </LocalizedClientLink>
             </div>
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2"
+                  className="hover:text-blue-400 flex gap-2 transition-colors duration-200 uppercase tracking-wide text-sm border border-transparent hover:border-blue-400/30 px-2 py-1"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
-                  Cart (0)
+                  [Cart (0)]
                 </LocalizedClientLink>
               }
             >
@@ -54,6 +84,9 @@ export default async function Nav() {
             </Suspense>
           </div>
         </nav>
+        
+        {/* Bottom decoration line */}
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-400/50 to-transparent"></div>
       </header>
     </div>
   )

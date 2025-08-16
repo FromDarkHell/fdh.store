@@ -37,32 +37,43 @@ const CartItemSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
     }, [innerRef.current?.value])
 
     return (
-      <div>
-        <IconBadge
-          onFocus={() => innerRef.current?.focus()}
-          onBlur={() => innerRef.current?.blur()}
+      <div className="relative">
+        <div
           className={clx(
-            "relative flex items-center txt-compact-small border text-ui-fg-base group",
+            "relative flex items-center bg-gray-800/50 border border-green-400/30 hover:border-blue-400/50 transition-all duration-200 font-mono text-sm group",
             className,
             {
-              "text-ui-fg-subtle": isPlaceholder,
+              "text-gray-400": isPlaceholder,
+              "text-green-300": !isPlaceholder,
             }
           )}
         >
+          {/* Terminal-style indicator */}
+          <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
+            <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+          </div>
+
           <select
             ref={innerRef}
             {...props}
-            className="appearance-none bg-transparent border-none px-4 transition-colors duration-150 focus:border-gray-700 outline-none w-16 h-16 items-center justify-center"
+            className="appearance-none bg-transparent border-none pl-6 pr-8 py-2 transition-colors duration-150 focus:outline-none text-green-300 font-mono w-full h-full cursor-pointer hover:text-blue-400"
           >
-            <option disabled value="">
+            <option disabled value="" className="bg-gray-800 text-gray-400">
               {placeholder}
             </option>
             {children}
           </select>
-          <span className="absolute flex pointer-events-none justify-end w-8 group-hover:animate-pulse">
-            <ChevronDown />
+
+          {/* Custom dropdown arrow */}
+          <span className="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none flex items-center justify-center text-green-400 group-hover:text-blue-400 transition-colors duration-200">
+            <ChevronDown className="w-3 h-3" />
           </span>
-        </IconBadge>
+
+          {/* Hover glow effect */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-200 pointer-events-none">
+            <div className="w-full h-full bg-gradient-to-r from-blue-400/20 to-green-400/20"></div>
+          </div>
+        </div>
       </div>
     )
   }

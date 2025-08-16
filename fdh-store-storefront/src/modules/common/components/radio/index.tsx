@@ -1,26 +1,46 @@
 const Radio = ({ checked, 'data-testid': dataTestId }: { checked: boolean, 'data-testid'?: string }) => {
   return (
-    <>
+    <div className="relative group">
       <button
         type="button"
         role="radio"
-        aria-checked="true"
+        aria-checked={checked}
         data-state={checked ? "checked" : "unchecked"}
-        className="group relative flex h-5 w-5 items-center justify-center outline-none"
+        className="group relative flex h-5 w-5 items-center justify-center outline-none cursor-pointer"
         data-testid={dataTestId || 'radio-button'}
       >
-        <div className="shadow-borders-base group-hover:shadow-borders-strong-with-shadow bg-ui-bg-base group-data-[state=checked]:bg-ui-bg-interactive group-data-[state=checked]:shadow-borders-interactive group-focus:!shadow-borders-interactive-with-focus group-disabled:!bg-ui-bg-disabled group-disabled:!shadow-borders-base flex h-[14px] w-[14px] items-center justify-center rounded-full transition-all">
+        {/* Outer ring */}
+        <div className={`
+          flex h-5 w-5 items-center justify-center rounded-full transition-all duration-300
+          border-2 bg-gray-800/50
+          ${checked 
+            ? 'border-blue-400 shadow-[0_0_10px_rgba(0,191,255,0.4)]' 
+            : 'border-green-400/50 group-hover:border-green-400/70'
+          }
+        `}>
+          {/* Inner dot */}
           {checked && (
             <span
               data-state={checked ? "checked" : "unchecked"}
               className="group flex items-center justify-center"
             >
-              <div className="bg-ui-bg-base shadow-details-contrast-on-bg-interactive group-disabled:bg-ui-fg-disabled rounded-full group-disabled:shadow-none h-1.5 w-1.5"></div>
+              <div className="bg-blue-400 rounded-full h-2 w-2 animate-pulse"></div>
             </span>
           )}
         </div>
+
+        {/* Terminal-style scanning ring */}
+        <div className={`
+          absolute inset-0 rounded-full border-2 transition-all duration-300 pointer-events-none
+          ${checked 
+            ? 'border-green-400/30 animate-pulse' 
+            : 'border-transparent group-hover:border-blue-400/20'
+          }
+        `} style={{ 
+          transform: 'scale(1.2)',
+        }} />
       </button>
-    </>
+    </div>
   )
 }
 

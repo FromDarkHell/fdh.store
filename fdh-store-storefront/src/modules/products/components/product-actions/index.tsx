@@ -150,7 +150,8 @@ export default function ProductActions({
             !isValidVariant
           }
           variant="primary"
-          className="w-full h-10"
+          className="w-full bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 font-mono uppercase tracking-wider transition-all duration-300"
+          size="large"
           isLoading={isAdding}
           data-testid="add-product-button"
         >
