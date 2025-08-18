@@ -1,0 +1,18 @@
+FROM node:20-alpine
+
+# Set working directory
+WORKDIR /app
+
+RUN apk add curl
+
+# Install dependencies first (for better caching)
+COPY package*.json ./
+RUN npm ci && npm cache clean --force
+
+# Copy application code
+COPY . .
+
+# Expose port
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
