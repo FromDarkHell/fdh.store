@@ -15,8 +15,8 @@ function checkEnvVariables() {
   })
 
   if (missingEnvs.length > 0) {
-    console.error(
-      c.red.bold("\n🚫 Error: Missing required environment variables\n")
+    console.warn(
+      c.yellow.bold("\n🚫 Error: Missing required environment variables\n")
     )
 
     missingEnvs.forEach(function (env) {
@@ -26,13 +26,11 @@ function checkEnvVariables() {
       }
     })
 
-    console.error(
+    console.warn(
       c.yellow(
         "\nPlease set these variables in your .env file or environment before starting the application.\n"
       )
     )
-
-    process.exit(1)
   }
 }
 

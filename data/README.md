@@ -1,0 +1,1 @@
+This is a simple directory used for storing data backups / dumps from a local dev environment to get cloned over to a new environment
