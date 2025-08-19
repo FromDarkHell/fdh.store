@@ -9,8 +9,8 @@ RUN apk add curl
 COPY package*.json ./
 RUN npm ci --only=production && npm cache clean --force
 
-COPY docker-entrypoint.sh ./
-RUN chmod +x ./docker-entrypoint.sh
+COPY docker-entrypoint.sh /app/
+RUN chmod +x /app/docker-entrypoint.sh
 
 # Copy application code
 COPY . .
