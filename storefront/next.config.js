@@ -19,10 +19,31 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "http",
         hostname: "localhost",
+      },
+      {
+        protocol: "http",
+        hostname: "backend",
+      },
+      {
+        protocol: "http",
+        hostname: process.env.MEDUSA_BACKEND_URL,
+      },
+      {
+        protocol: "https",
+        hostname: process.env.MEDUSA_BACKEND_URL,
+      },
+      {
+        protocol: "http",
+        hostname: process.env.NEXT_PUBLIC_BASE_URL,
+      },
+      {
+        protocol: "https",
+        hostname: process.env.NEXT_PUBLIC_BASE_URL,
       },
     ],
   },

@@ -56,7 +56,7 @@ services:
       - internal
       - exposed
     volumes:
-      - medusa_uploads:/app/static
+      - medusa_uploads:/app/.medusa/server/static
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:9000/health || exit 1"]
       interval: 30s
