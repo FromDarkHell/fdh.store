@@ -38,6 +38,14 @@ module.exports = defineConfig({
   },
   modules: [
     {
+      resolve: "@medusajs/medusa/file-local",
+      id: "local",
+      options: {
+        backend_url: process.env.MEDUSA_BACKEND_URL + "/static",
+      },
+    },
+
+    {
       resolve: "@medusajs/event-bus-redis",
       key: ModuleRegistrationName.EVENT_BUS,
       options: {
