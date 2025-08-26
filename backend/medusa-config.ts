@@ -30,10 +30,6 @@ module.exports = defineConfig({
       sameSite: "lax",
       maxAge: 24 * 60 * 60 * 1000,
     },
-    admin: {
-      backendUrl: process.env.MEDUSA_BACKEND_URL,
-      storefrontUrl: process.env.NEXT_PUBLIC_BASE_URL,
-    },
   },
   modules: [
     {
