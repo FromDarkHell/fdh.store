@@ -33,6 +33,21 @@ module.exports = defineConfig({
   },
   modules: [
     {
+      resolve: "@medusajs/medusa/notification",
+      options: {
+        providers: [
+          {
+            resolve: "./src/modules/ntfy",
+            id: "ntfy",
+            options: {
+              channels: ["ntfy"],
+              notification_url: process.env.NTFY_URL,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: "@medusajs/medusa/file",
       key: ModuleRegistrationName.FILE,
       options: {
@@ -75,6 +90,7 @@ module.exports = defineConfig({
             id: "stripe",
             options: {
               apiKey: process.env.STRIPE_API_KEY,
+              automatic_payment_methods: true,
             },
           },
         ],
