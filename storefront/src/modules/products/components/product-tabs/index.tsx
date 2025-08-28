@@ -54,10 +54,9 @@ const ShippingInfoTab = () => {
         <div className="flex items-start gap-x-2">
           <Refresh />
           <div>
-            <span className="font-semibold">Simple exchanges</span>
+            <span className="font-semibold">30-day warranty</span>
             <p className="max-w-sm">
-              Is the fit not quite right? No worries - we&apos;ll exchange your
-              product for a new one.
+              Having issues? No worries - we&apos;ll send a label and have you send it back to be repaired!
             </p>
           </div>
         </div>
