@@ -149,8 +149,28 @@ export default async function Footer() {
             {/* System Links */}
             <div className="flex flex-col gap-y-4">
               <span className="text-base font-bold text-green-400 uppercase tracking-wider border-b border-green-400/30 pb-2">
-                [System]
+                [Social Media]
               </span>
+
+                <ul className="grid grid-cols-1 gap-3 text-blue-400">
+                    <li>
+                      <a
+                        className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                        href="https://www.facebook.com/profile.php?id=61579950630932"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                        href="tel:+15735699021"
+                      >
+                        Call Now
+                      </a>
+                    </li>
+                </ul>
             </div>
           </div>
         </div>
