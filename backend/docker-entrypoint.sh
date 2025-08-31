@@ -71,12 +71,12 @@ main() {
 # Install postgresql-client and redis-tools if not available
 if ! command -v pg_isready &> /dev/null; then
     echo "Installing postgresql-client..."
-    apk add --no-cache postgresql-client
+    apk add postgresql17-client
 fi
 
 if ! command -v redis-cli &> /dev/null; then
     echo "Installing redis tools..."
-    apk add --no-cache redis
+    apk add redis
 fi
 
 # Run main function
