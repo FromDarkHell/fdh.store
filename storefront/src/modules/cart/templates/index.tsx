@@ -53,7 +53,7 @@ const CartTemplate = ({
               <div className="bg-gray-800/30 border border-green-400/30 relative overflow-hidden">
                 {/* Terminal scan lines effect */}
                 <div className="absolute inset-0 opacity-20 pointer-events-none">
-                  <div className="w-full h-full bg-gradient-to-b from-transparent via-green-400/10 to-transparent animate-pulse"></div>
+                  <div className="w-full h-full bg-gradient-to-b from-transparent via-green-400/10 to-transparent "></div>
                 </div>
                 
                 <div className="p-6 relative z-10">
@@ -74,7 +74,7 @@ const CartTemplate = ({
                   <div className="space-y-3">
                     {/* Header */}
                     <div className="flex items-center gap-2 text-xs font-mono text-gray-400 border-b border-blue-400/20 pb-2">
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></div>
+                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full "></div>
                       <span>SYSTEM_INFO</span>
                     </div>
                     
@@ -115,10 +115,10 @@ const CartTemplate = ({
       </div>
 
       {/* Floating decorative elements */}
-      <div className="absolute top-24 left-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-30"></div>
-      <div className="absolute top-40 right-32 w-1 h-1 bg-green-400 rounded-full animate-pulse opacity-50" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-32 left-24 w-1 h-1 bg-blue-400 rounded-full animate-pulse opacity-40" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-20 right-20 w-2 h-2 bg-green-400 rounded-full animate-pulse opacity-30" style={{ animationDelay: '0.5s' }}></div>
+      <div className="absolute top-24 left-20 w-2 h-2 bg-blue-400 rounded-full  opacity-30"></div>
+      <div className="absolute top-40 right-32 w-1 h-1 bg-green-400 rounded-full  opacity-50" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-32 left-24 w-1 h-1 bg-blue-400 rounded-full  opacity-40" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-20 right-20 w-2 h-2 bg-green-400 rounded-full  opacity-30" style={{ animationDelay: '0.5s' }}></div>
     </div>
   )
 }

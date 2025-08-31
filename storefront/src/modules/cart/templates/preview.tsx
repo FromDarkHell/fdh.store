@@ -36,7 +36,7 @@ const ItemsPreviewTemplate = ({ cart }: ItemsTemplateProps) => {
       <div className="bg-gray-800/80 border-b border-green-400/30 px-3 py-2 mb-2 relative z-10">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+            <div className="w-1.5 h-1.5 bg-green-400 rounded-full "></div>
             <span className="text-xs font-mono text-green-400 uppercase tracking-wide">
               Preview Mode
             </span>
@@ -112,7 +112,7 @@ const ItemsPreviewTemplate = ({ cart }: ItemsTemplateProps) => {
                   return (
                     <Table.Row 
                       key={i}
-                      className="border-b border-green-400/10 font-mono animate-pulse"
+                      className="border-b border-green-400/10 font-mono "
                     >
                       <Table.Cell className="w-8 text-xs text-gray-500 font-mono">
                         --
@@ -131,7 +131,7 @@ const ItemsPreviewTemplate = ({ cart }: ItemsTemplateProps) => {
         {!items && (
           <div className="absolute inset-0 bg-gray-800/50 flex items-center justify-center">
             <div className="text-center font-mono">
-              <div className="text-green-400 text-sm uppercase tracking-wide animate-pulse">
+              <div className="text-green-400 text-sm uppercase tracking-wide ">
                 Loading cart data...
               </div>
               <div className="text-xs text-gray-400 mt-1">

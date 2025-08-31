@@ -5,6 +5,7 @@ import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Image from "next/image"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
@@ -18,12 +19,17 @@ export default async function Nav() {
         <nav className="content-container txt-xsmall-plus text-green-300 flex items-center justify-between w-full h-full text-small-regular font-mono">
           {/* Center - Logo */}
           <div className="flex items-center h-full relative">
+            
+            <div className="mr-2 mb-1">
+              <Image className="bg-none" src="/logo.png" alt="FDH Systems" height={32} width={32}/>
+            </div>
+
             <LocalizedClientLink
               href="/"
               className="text-xl font-bold hover:text-blue-400 uppercase tracking-wider transition-all duration-300 relative group"
               data-testid="nav-store-link"
             >
-              <span className="relative z-10">fdh Systems</span>
+              <span className="relative z-10">FDH Systems</span>
               {/* Subtle glitch effect on hover */}
               <span className="absolute inset-0 text-blue-400 opacity-0 group-hover:opacity-70 transition-opacity duration-150 transform group-hover:translate-x-0.5">
                 fdh Systems
@@ -34,7 +40,7 @@ export default async function Nav() {
             </LocalizedClientLink>
             
             {/* Terminal cursor */}
-            <span className="ml-1 text-green-400 animate-pulse">_</span>
+            <span className="ml-1 text-green-400 ">_</span>
           </div>
 
           {/* Right side - Account & Cart */}

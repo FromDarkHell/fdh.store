@@ -160,7 +160,7 @@ const Item = ({ item, type = "full", currencyCode }: ItemProps) => {
             { updating || error &&
             <div className="text-xs font-mono text-gray-400 flex items-center gap-2">
               <div className={clx("w-1.5 h-1.5 rounded-full", {
-                "bg-yellow-400 animate-pulse": updating,
+                "bg-yellow-400 ": updating,
                 "bg-green-400": !updating && !error,
                 "bg-red-400": error,
               })}></div>

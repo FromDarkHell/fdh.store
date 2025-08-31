@@ -47,7 +47,7 @@ export default async function Footer() {
             {/* Terminal-style info */}
             <div className="bg-gray-800/50 border border-green-400/30 p-3 font-mono text-xs max-w-xs">
               <div className="flex items-center gap-1 mb-2">
-                <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-1.5 h-1.5 bg-green-400 rounded-full "></div>
                 <span className="text-green-400">STATUS: ONLINE</span>
               </div>
               <div className="text-gray-400">
@@ -187,7 +187,7 @@ export default async function Footer() {
             {/* System status */}
             <div className="flex items-center gap-4 text-xs font-mono">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-green-400 rounded-full "></div>
                 <span className="text-green-400">SYSTEMS OPERATIONAL</span>
               </div>
               <div className="text-gray-500">

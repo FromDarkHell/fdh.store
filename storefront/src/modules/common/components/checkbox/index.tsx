@@ -75,7 +75,7 @@ const CheckboxWithLabel: React.FC<CheckboxProps> = ({
       <div className="flex items-center gap-1">
         <div className={`
           w-1.5 h-1.5 rounded-full transition-all duration-200
-          ${checked ? 'bg-green-400 animate-pulse' : 'bg-gray-600'}
+          ${checked ? 'bg-green-400 ' : 'bg-gray-600'}
         `} />
       </div>
     </div>

@@ -50,7 +50,7 @@ const CartItemSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
         >
           {/* Terminal-style indicator */}
           <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
-            <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+            <div className="w-1.5 h-1.5 bg-green-400 rounded-full "></div>
           </div>
 
           <select

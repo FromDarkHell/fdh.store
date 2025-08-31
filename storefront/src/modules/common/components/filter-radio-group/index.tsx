@@ -23,7 +23,7 @@ const FilterRadioGroup = ({
     <div className="flex gap-x-3 flex-col gap-y-4 bg-gray-800/30 border border-green-400/20 p-4 font-mono">
       {/* Terminal header */}
       <div className="flex items-center gap-2 pb-2 border-b border-green-400/20">
-        <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+        <div className="w-1.5 h-1.5 bg-green-400 rounded-full "></div>
         <Text className="text-sm font-bold text-green-400 uppercase tracking-wider">
           [{title}]
         </Text>
@@ -54,7 +54,7 @@ const FilterRadioGroup = ({
             {/* Active indicator */}
             {i.value === value && (
               <EllipseMiniSolid 
-                className="text-blue-400 animate-pulse" 
+                className="text-blue-400 " 
               />
             )}
             
@@ -84,7 +84,7 @@ const FilterRadioGroup = ({
             <div className={clx(
               "w-2 h-2 rounded-full transition-all duration-200",
               {
-                "bg-blue-400 animate-pulse": i.value === value,
+                "bg-blue-400 ": i.value === value,
                 "bg-gray-600": i.value !== value,
               }
             )} />
@@ -96,7 +96,7 @@ const FilterRadioGroup = ({
       <div className="flex items-center justify-between pt-2 border-t border-green-400/20 text-xs text-gray-400">
         <span>OPTIONS: {items?.length || 0}</span>
         <span className="flex items-center gap-1">
-          <div className="w-1 h-1 bg-green-400 rounded-full animate-pulse"></div>
+          <div className="w-1 h-1 bg-green-400 rounded-full "></div>
           ACTIVE
         </span>
       </div>

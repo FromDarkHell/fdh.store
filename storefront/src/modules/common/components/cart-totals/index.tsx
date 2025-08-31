@@ -142,7 +142,7 @@ const CartTotals: React.FC<CartTotalsProps> = ({ totals }) => {
 
       {/* Status indicator */}
       <div className="flex items-center justify-center gap-2 mt-3 text-xs text-gray-400">
-        <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+        <div className="w-1.5 h-1.5 bg-green-400 rounded-full "></div>
         <span>CALCULATIONS_COMPLETE</span>
       </div>
     </div>

@@ -19,7 +19,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: false,
     remotePatterns: [
       {
         protocol: "http",
@@ -31,19 +31,23 @@ const nextConfig = {
       },
       {
         protocol: "http",
-        hostname: process.env.MEDUSA_BACKEND_URL,
+        hostname: new URL(process.env.MEDUSA_BACKEND_URL).hostname,
       },
       {
         protocol: "https",
-        hostname: process.env.MEDUSA_BACKEND_URL,
+        hostname: new URL(process.env.MEDUSA_BACKEND_URL).hostname,
       },
       {
         protocol: "http",
-        hostname: process.env.NEXT_PUBLIC_BASE_URL,
+        hostname: new URL(process.env.NEXT_PUBLIC_BASE_URL).hostname,
       },
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_BASE_URL,
+        hostname: new URL(process.env.NEXT_PUBLIC_BASE_URL).hostname,
+      },
+      {
+        protocol: "https",
+        hostname: new URL(process.env.S3_FILE_URL).hostname,
       },
     ],
   },

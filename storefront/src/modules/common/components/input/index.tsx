@@ -102,7 +102,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {/* Terminal-style cursor indicator */}
         {isFocused && (
           <div className="flex items-center gap-1 mt-1 text-xs text-blue-400">
-            <div className="w-1 h-1 bg-blue-400 rounded-full animate-pulse"></div>
+            <div className="w-1 h-1 bg-blue-400 rounded-full "></div>
             <span>INPUT_ACTIVE</span>
           </div>
         )}

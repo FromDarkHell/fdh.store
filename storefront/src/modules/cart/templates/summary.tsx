@@ -54,7 +54,7 @@ const Summary = ({ cart }: SummaryProps) => {
             <span className="text-xs text-gray-400 ml-2 font-mono">cart_summary.exe</span>
           </div>
           <div className="flex items-center gap-2 text-xs font-mono">
-            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></div>
+            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full "></div>
             <span className="text-blue-400">CALCULATING</span>
           </div>
         </div>
@@ -123,8 +123,8 @@ const Summary = ({ cart }: SummaryProps) => {
       </div>
 
       {/* Floating elements for visual interest */}
-      <div className="absolute top-4 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse opacity-50"></div>
-      <div className="absolute bottom-8 left-4 w-1 h-1 bg-green-400 rounded-full animate-pulse opacity-50" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-4 right-4 w-1 h-1 bg-blue-400 rounded-full  opacity-50"></div>
+      <div className="absolute bottom-8 left-4 w-1 h-1 bg-green-400 rounded-full  opacity-50" style={{ animationDelay: '1s' }}></div>
     </div>
   )
 }

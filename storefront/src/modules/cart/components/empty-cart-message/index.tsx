@@ -37,7 +37,7 @@ const EmptyCartMessage = () => {
 
           {/* Status indicator */}
           <div className="flex items-center justify-center gap-2 text-xs font-mono text-gray-400">
-            <div className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse"></div>
+            <div className="w-1.5 h-1.5 bg-red-400 rounded-full "></div>
             <span>CART_EMPTY</span>
           </div>
 
@@ -101,10 +101,10 @@ const EmptyCartMessage = () => {
       </div>
 
       {/* Floating decorative elements */}
-      <div className="absolute top-20 left-20 w-1 h-1 bg-blue-400 rounded-full animate-pulse opacity-50"></div>
-      <div className="absolute top-32 right-24 w-1 h-1 bg-green-400 rounded-full animate-pulse opacity-50" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-20 left-32 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-30" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-32 right-20 w-1 h-1 bg-green-400 rounded-full animate-pulse opacity-50" style={{ animationDelay: '0.5s' }}></div>
+      <div className="absolute top-20 left-20 w-1 h-1 bg-blue-400 rounded-full  opacity-50"></div>
+      <div className="absolute top-32 right-24 w-1 h-1 bg-green-400 rounded-full  opacity-50" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-20 left-32 w-2 h-2 bg-blue-400 rounded-full  opacity-30" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-32 right-20 w-1 h-1 bg-green-400 rounded-full  opacity-50" style={{ animationDelay: '0.5s' }}></div>
     </div>
   )
 }

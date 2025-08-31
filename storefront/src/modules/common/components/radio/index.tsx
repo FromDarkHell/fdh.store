@@ -24,7 +24,7 @@ const Radio = ({ checked, 'data-testid': dataTestId }: { checked: boolean, 'data
               data-state={checked ? "checked" : "unchecked"}
               className="group flex items-center justify-center"
             >
-              <div className="bg-blue-400 rounded-full h-2 w-2 animate-pulse"></div>
+              <div className="bg-blue-400 rounded-full h-2 w-2 "></div>
             </span>
           )}
         </div>
@@ -33,7 +33,7 @@ const Radio = ({ checked, 'data-testid': dataTestId }: { checked: boolean, 'data
         <div className={`
           absolute inset-0 rounded-full border-2 transition-all duration-300 pointer-events-none
           ${checked 
-            ? 'border-green-400/30 animate-pulse' 
+            ? 'border-green-400/30 ' 
             : 'border-transparent group-hover:border-blue-400/20'
           }
         `} style={{ 

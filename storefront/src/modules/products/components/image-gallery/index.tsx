@@ -124,12 +124,12 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
           )}
 
           <div className="absolute inset-0 pointer-events-none opacity-20">
-            <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-400 to-transparent animate-pulse" style={{
+            <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-400 to-transparent " style={{
               top: '30%',
               animationDuration: '3s',
               animationDelay: '0s'
             }}></div>
-            <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse" style={{
+            <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent " style={{
               top: '70%',
               animationDuration: '4s',
               animationDelay: '1s'
@@ -187,7 +187,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                       <div className="absolute inset-0 bg-gray-900/20"></div>
 
                       {index === currentIndex && (
-                        <div className="absolute top-1 right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <div className="absolute top-1 right-1 w-2 h-2 bg-green-400 rounded-full "></div>
                       )}
                     </>
                   )}

@@ -25,7 +25,7 @@ const SignInPrompt = () => {
       <div className="relative z-10 flex-1">
         {/* Status indicator */}
         <div className="flex items-center gap-2 text-xs font-mono text-gray-400 mb-3">
-          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></div>
+          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full "></div>
           <span>AUTHENTICATION_AVAILABLE</span>
         </div>
 

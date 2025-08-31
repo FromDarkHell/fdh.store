@@ -3,7 +3,7 @@ import { Button, Heading } from "@medusajs/ui"
 
 const Hero = () => {
   return (
-    <div className="h-[36vh] w-full border-b border-green-400 relative bg-gray-800 scanlines overflow-hidden">
+    <div className="h-[36vh] w-full border-b border-green-400 relative bg-gray-800 overflow-hidden">
       {/* Background grid effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-gradient-to-br from-blue-900/20 to-green-900/20"></div>
@@ -78,10 +78,10 @@ const Hero = () => {
       </div>
 
       {/* Animated elements */}
-      <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-20 right-20 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-20 left-20 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-10 right-10 w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+      <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full "></div>
+      <div className="absolute top-20 right-20 w-1 h-1 bg-green-400 rounded-full " style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-20 left-20 w-1 h-1 bg-blue-400 rounded-full " style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-10 right-10 w-2 h-2 bg-green-400 rounded-full " style={{ animationDelay: '0.5s' }}></div>
     </div>
   )
 }
