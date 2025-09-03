@@ -14,7 +14,7 @@ export default async function Footer() {
     <footer className="border-t border-green-400/30 w-full bg-gray-800 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 opacity-10">
-        <div 
+        <div
           className="w-full h-full"
           style={{
             backgroundImage: `
@@ -25,10 +25,10 @@ export default async function Footer() {
           }}
         ></div>
       </div>
-      
+
       {/* Top accent line */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-400 to-transparent"></div>
-      
+
       <div className="content-container flex flex-col w-full relative z-10">
         <div className="flex flex-col gap-y-12 xsmall:flex-row items-start justify-between py-20">
           {/* Brand section */}
@@ -43,7 +43,7 @@ export default async function Footer() {
                 fdh Systems
               </span>
             </LocalizedClientLink>
-            
+
             {/* Terminal-style info */}
             <div className="bg-gray-800/50 border border-green-400/30 p-3 font-mono text-xs max-w-xs">
               <div className="flex items-center gap-1 mb-2">
@@ -51,7 +51,7 @@ export default async function Footer() {
                 <span className="text-green-400">STATUS: ONLINE</span>
               </div>
               <div className="text-gray-400">
-                <span className="text-blue-400"></span>Specializing in repairs, refurbishes, and mods. 
+                <span className="text-blue-400"></span>Specializing in repairs, refurbishes, and mods.
               </div>
             </div>
           </div>
@@ -152,25 +152,43 @@ export default async function Footer() {
                 [Social Media]
               </span>
 
-                <ul className="grid grid-cols-1 gap-3 text-blue-400">
-                    <li>
-                      <a
-                        className="hover:text-blue-600 transition-colors duration-200 text-sm"
-                        href="https://www.facebook.com/profile.php?id=61579950630932"
-                      >
-                        Facebook
-                      </a>
-                    </li>
+              <ul className="grid grid-cols-1 gap-3 text-blue-400">
+                <li>
+                  <a
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href="https://www.facebook.com/profile.php?id=61579950630932"
+                  >
+                    Facebook
+                  </a>
+                </li>
 
-                    <li>
-                      <a
-                        className="hover:text-blue-600 transition-colors duration-200 text-sm"
-                        href="tel:+15735699021"
-                      >
-                        Call Now
-                      </a>
-                    </li>
-                </ul>
+                <li>
+                  <a
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href="https://www.ebay.com/usr/fdh-systems"
+                  >
+                    eBay
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href="tel:+15735699021"
+                  >
+                    Call Now
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href="mailto:fdh@fdh.one"
+                  >
+                    Email
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -180,10 +198,10 @@ export default async function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <Text className="text-xs text-gray-500 font-mono">
-              © {new Date().getFullYear()} fdh Systems. All rights reserved. | 
+              © {new Date().getFullYear()} fdh Systems. All rights reserved. |
               <span className="text-green-400 ml-1">SECURE CONNECTION ESTABLISHED</span>
             </Text>
-            
+
             {/* System status */}
             <div className="flex items-center gap-4 text-xs font-mono">
               <div className="flex items-center gap-2">
@@ -197,7 +215,7 @@ export default async function Footer() {
           </div>
         </div>
       </div>
-      
+
       {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
     </footer>
