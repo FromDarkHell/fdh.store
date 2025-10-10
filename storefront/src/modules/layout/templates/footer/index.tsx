@@ -51,7 +51,7 @@ export default async function Footer() {
                 <span className="text-green-400">STATUS: ONLINE</span>
               </div>
               <div className="text-gray-400">
-                <span className="text-blue-400"></span>Specializing in repairs, refurbishes, and mods.
+                We bring your electronics to life, no matter what it is
               </div>
             </div>
           </div>
@@ -153,23 +153,6 @@ export default async function Footer() {
               </span>
 
               <ul className="grid grid-cols-1 gap-3 text-blue-400">
-                <li>
-                  <a
-                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
-                    href="https://www.facebook.com/profile.php?id=61579950630932"
-                  >
-                    Facebook
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
-                    href="https://www.ebay.com/usr/fdh-systems"
-                  >
-                    eBay
-                  </a>
-                </li>
 
                 <li>
                   <a
@@ -188,6 +171,44 @@ export default async function Footer() {
                     Email
                   </a>
                 </li>
+
+                <li>
+                  <a
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href="https://www.facebook.com/profile.php?id=61579950630932"
+                  >
+                    Facebook
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href="https://bsky.app/profile/store.fdh.one"
+                  >
+                    Bluesky
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href="https://www.ebay.com/usr/fdh-systems"
+                  >
+                    eBay
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href="https://www.etsy.com/shop/FDHSystems1"
+                  >
+                    Etsy
+                  </a>
+                </li>
+
+
               </ul>
             </div>
           </div>

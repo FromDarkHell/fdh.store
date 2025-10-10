@@ -7,7 +7,7 @@ import { getRegion } from "@lib/data/regions"
 
 export const metadata: Metadata = {
   title: "FDH Systems",
-  description: "Specializing in repairs, refurbishes, and mods",
+  description: "We bring your electronics to life, no matter what it is",
 }
 
 export default async function Home(props: {

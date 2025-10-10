@@ -2,16 +2,25 @@ import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
 
 const Hero = () => {
+  const reviews = [
+    { text: "Amazing seller! Arrived quickly, well packaged. Super patient, couldn't be happier this purchase, highly recommend!", product: "Xbox 360 500GB", name: "J." },
+    { text: "System works great. Fast shipping too.", product: "Xbox 360 1TB RGH", name: "M." },
+    { text: "10/10 fast shipping ", product: "Xbox 360 250GB RGH", name: "K." },
+    { text: "Got item. Works great. Thanks", product: "Xbox 360 250GB RGH", name: "L." },
+    { text: "Great buyer, easy to work with, no issues!", product: "Xbox 360 250GB", name: "C." },
+    { text: "Great experience, easy to work with, no issues!", product: "Xbox 360 250GB", name: "M." }
+  ]
+
   return (
     <div className="h-[36vh] w-full border-b border-green-400 relative bg-gray-800 overflow-hidden">
       {/* Background grid effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-gradient-to-br from-blue-900/20 to-green-900/20"></div>
       </div>
-      
+
       {/* Terminal-style background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div 
+        <div
           className="w-full h-full"
           style={{
             backgroundImage: `
@@ -36,18 +45,18 @@ const Hero = () => {
               fdh Systems
             </Heading>
           </div>
-          
+
           {/* Tagline with RGB split effect */}
           <div className="relative">
             <Heading
               level="h2"
               className="text-2xl leading-relaxed text-blue-400 font-mono font-normal uppercase tracking-widest"
-              data-text="Specializing in repairs, refurbishes, and mods. "
+              data-text="We bring your electronics to life, no matter what it is"
             >
-              Specializing in repairs, refurbishes, and mods. 
+              We bring your electronics to life, no matter what it is
             </Heading>
           </div>
-          
+
           {/* Terminal-style description */}
           <div className="mt-8 pb-4 p-4 bg-gray-800/50 border border-green-400/30 font-mono text-sm text-green-300">
             <div className="flex items-center gap-2 mb-2">
@@ -64,12 +73,28 @@ const Hero = () => {
 
               <div className="text-left">
                 <span className="text-white"><span className="text-green-400 mr-2 font-semibold">[OK]</span>Hardware repair module online</span>
-                <br/>
+                <br />
                 <span className="text-white"><span className="text-green-400 mr-2 font-semibold">[OK]</span>Modding services active</span>
-                <br/>
+                <br />
                 <span className="text-white"><span className="text-green-400 mr-2 font-semibold">[OK]</span>Secure shipping protocols loaded</span>
-                <br/>
+                <br />
                 <span className="text-white"><span className="text-green-400 mr-2 font-semibold">[OK]</span>30-day warranty enabled</span>
+              </div>
+
+              <div className="mt-2">
+                <span className="text-gray-400 text-sm block"># recent_user_feedback.log</span>
+
+                <div className="text-center overflow-hidden h-5 relative w-full mx-auto">
+                  <div className="animate-scrollReviews">
+                    {reviews.map((review, i) => (
+                      <div key={i} className="text-white whitespace-nowrap">
+                        <span className="text-green-400 mr-2 font-semibold">[OK]</span>
+                        "{review.text}"
+                        — <span className="text-blue-400 ml-2">{review.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
