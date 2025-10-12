@@ -17,7 +17,6 @@ export async function submitCustomPayment(
 }> {
   const amount = parseFloat(formData.get("amount") as string)
   const description = formData.get("description") as string
-  const email = formData.get("email") as string
   const countryCode = formData.get("countryCode") as string
 
   // Validate
