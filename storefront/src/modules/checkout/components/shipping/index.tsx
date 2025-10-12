@@ -21,23 +21,19 @@ type ShippingProps = {
   availableShippingMethods: HttpTypes.StoreCartShippingOption[] | null
 }
 
-function formatAddress(address) {
+function safeAddressFormat(address) {
   if (!address) {
     return ""
   }
 
   let ret = ""
 
-  if (address.address_1) {
-    ret += ` ${address.address_1}`
-  }
-
-  if (address.address_2) {
-    ret += `, ${address.address_2}`
-  }
-
   if (address.postal_code) {
-    ret += `, ${address.postal_code} ${address.city}`
+    ret += `${address.postal_code}, ${address.city}`
+  }
+
+  if (address.province) {
+    ret += `, ${address.province}`
   }
 
   if (address.country_code) {
@@ -189,7 +185,7 @@ const Shipping: React.FC<ShippingProps> = ({
                 Shipping Method
               </span>
               <span className="mb-4 text-ui-fg-muted txt-medium">
-                How would you like you order delivered
+                How would you like your order delivered
               </span>
             </div>
             <div data-testid="delivery-options-container">
@@ -223,7 +219,7 @@ const Shipping: React.FC<ShippingProps> = ({
                           checked={showPickupOptions === PICKUP_OPTION_ON}
                         />
                         <span className="text-base-regular">
-                          Pick up your order
+                          Local Pickup
                         </span>
                       </div>
                       <span className="justify-self-end text-ui-fg-base">
@@ -295,7 +291,7 @@ const Shipping: React.FC<ShippingProps> = ({
             <div className="grid">
               <div className="flex flex-col">
                 <span className="font-medium txt-medium text-ui-fg-base">
-                  Store
+                  Store Pickup
                 </span>
                 <span className="mb-4 text-ui-fg-muted txt-medium">
                   Choose a store near you
@@ -333,7 +329,7 @@ const Shipping: React.FC<ShippingProps> = ({
                                 {option.name}
                               </span>
                               <span className="text-base-regular text-ui-fg-muted">
-                                {formatAddress(
+                                {safeAddressFormat(
                                   option.service_zone?.fulfillment_set?.location
                                     ?.address
                                 )}

@@ -149,7 +149,7 @@ export default async function Footer() {
             {/* System Links */}
             <div className="flex flex-col gap-y-4">
               <span className="text-base font-bold text-green-400 uppercase tracking-wider border-b border-green-400/30 pb-2">
-                [Social Media]
+                [Contact]
               </span>
 
               <ul className="grid grid-cols-1 gap-3 text-blue-400">
@@ -208,7 +208,18 @@ export default async function Footer() {
                   </a>
                 </li>
 
+                <hr className="border-green-400/30" />
 
+                <li>
+
+                  <LocalizedClientLink
+                    className="hover:text-blue-600 transition-colors duration-200 text-sm"
+                    href={`/custom-payment`}
+                    data-testid="custom-payment-link"
+                  >
+                    Custom Invoice
+                  </LocalizedClientLink>
+                </li>
               </ul>
             </div>
           </div>
