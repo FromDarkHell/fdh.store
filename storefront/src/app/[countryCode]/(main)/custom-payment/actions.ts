@@ -44,7 +44,7 @@ export async function submitCustomPayment(
     })
 
     // Redirect will throw, so this won't be reached if successful
-    redirect(result.checkoutUrl)
+    redirect(result.cartUrl)
   } catch (error) {
     // If it's a redirect, let it through
     if (error && typeof error === "object" && "digest" in error) {

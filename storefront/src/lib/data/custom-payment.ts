@@ -108,7 +108,7 @@ export async function createCustomPayment({
 
     return {
       cartId: cart.id,
-      checkoutUrl: `/${countryCode}/checkout`,
+      cartUrl: `/${countryCode}/cart`,
       success: true,
     }
   } catch (error) {
