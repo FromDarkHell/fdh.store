@@ -8,7 +8,10 @@ const Hero = () => {
     { text: "10/10 fast shipping ", product: "Xbox 360 250GB RGH", name: "K." },
     { text: "Got item. Works great. Thanks", product: "Xbox 360 250GB RGH", name: "L." },
     { text: "Great buyer, easy to work with, no issues!", product: "Xbox 360 250GB", name: "C." },
-    { text: "Great experience, easy to work with, no issues!", product: "Xbox 360 250GB", name: "M." }
+    { text: "Great experience, easy to work with, no issues!", product: "Xbox 360 250GB", name: "M." },
+    { text: "Fast communication and great customer service. Came with what I requested and runs great. No damages or cosmetic damage. Overall a good seller.", product: "Xbox 360 250GB RGH", name: "C." },
+    { text: "Great product! It arrived on time and works exactly as described. Very satisfied with the quality and value for money.", product: "Xbox 360 2TB HDD", name: "B." },
+    { text: "My Xbox 360 got modded and it was everything I wanted! Plus he was very nice when chatting so great customer service!", product: "Xbox 360 RGH Send-In", name: "C." }
   ]
 
   return (

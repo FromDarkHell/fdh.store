@@ -4,7 +4,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Install netcat for health checking
-RUN apk add --no-cache netcat-openbsd
+RUN apk add --no-cache netcat-openbsd curl
 
 # Copy package.json and package-lock.json from storefront directory
 COPY package*.json ./
