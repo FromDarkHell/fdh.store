@@ -5,6 +5,9 @@ import Hero from "@modules/home/components/hero"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
+export const dynamic = 'force-dynamic' // Force dynamic rendering
+export const dynamicParams = true // Allow dynamic params not in generateStaticParams
+
 export const metadata: Metadata = {
   title: "FDH Systems",
   description: "We bring your electronics to life, no matter what it is",
