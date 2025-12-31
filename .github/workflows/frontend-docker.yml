@@ -10,7 +10,7 @@ jobs:
   build-and-push-frontend:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/fdh-store-frontend
+      IMAGE_NAME: ghcr.io/fromdarkhell/fdh-store-frontend
       IMAGE_TAG: ${{ github.sha }}
 
     steps:
