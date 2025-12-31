@@ -15,7 +15,7 @@ const Hero = () => {
   ]
 
   return (
-    <div className="h-[36vh] w-full border-b border-green-400 relative bg-gray-800 overflow-hidden">
+    <div className="h-[40vh] w-full border-b border-green-400 relative bg-gray-800 overflow-hidden">
       {/* Background grid effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-gradient-to-br from-blue-900/20 to-green-900/20"></div>
@@ -84,13 +84,24 @@ const Hero = () => {
                 <span className="text-white"><span className="text-green-400 mr-2 font-semibold">[OK]</span>30-day warranty enabled</span>
               </div>
 
+
               <div className="mt-2">
                 <span className="text-gray-400 text-sm block"># recent_user_feedback.log</span>
 
-                <div className="text-center overflow-hidden h-5 relative w-full mx-auto">
+                <div className="overflow-hidden h-10 relative w-full mx-auto">
                   <div className="animate-scrollReviews">
+
                     {reviews.map((review, i) => (
-                      <div key={i} className="text-white whitespace-nowrap">
+                      <div key={i} className="text-white break-words">
+                        <span className="text-green-400 mr-2 font-semibold">[OK]</span>
+                        "{review.text}"
+                        — <span className="text-blue-400 ml-2">{review.name}</span>
+                      </div>
+                    ))}
+
+                    {/* Duplicate items for smooth infinite scroll */}
+                    {reviews.map((review, i) => (
+                      <div key={`dup-${i}`} className="text-white break-words">
                         <span className="text-green-400 mr-2 font-semibold">[OK]</span>
                         "{review.text}"
                         — <span className="text-blue-400 ml-2">{review.name}</span>
@@ -99,6 +110,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

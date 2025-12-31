@@ -208,26 +208,19 @@
   }
 
   @keyframes scrollReviews {
-    0%,
-    20% {
+    0% {
       transform: translateY(0);
     }
-    25%,
-    45% {
-      transform: translateY(-1.25rem);
-    }
-    50%,
-    70% {
-      transform: translateY(-2.5rem);
-    }
-    75%,
     100% {
-      transform: translateY(0);
-    }
+      transform: translateY(-50%);
+    } /* scroll up by half height (duplicate items) */
   }
 
   .animate-scrollReviews {
-    animation: scrollReviews 10s infinite linear;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* optional spacing between items */
+    animation: scrollReviews 20s linear infinite;
   }
 }
 
