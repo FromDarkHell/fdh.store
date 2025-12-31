@@ -41,7 +41,7 @@ jobs:
       - name: Build and push frontend Docker image
         run: |
           docker buildx build \
-            --file frontend/Dockerfile \
+            --file storefront/Dockerfile \
             --tag $IMAGE_NAME:$IMAGE_TAG \
             --tag $IMAGE_NAME:latest \
             --cache-from=type=local,src=/tmp/.buildx-cache \
